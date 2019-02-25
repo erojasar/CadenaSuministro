@@ -19,4 +19,10 @@ public class DistributionCenter extends CadenaSuministro{
         this.productosDistribuidora = new ArrayList<ProductoDistribucion>();
     }
     
+    public boolean registrarProductoDistribuir(String nombreProducto, String destino, Fecha fechaLlegada, 
+                                Fecha fechaSalida, ProductoProducido productoFabrica){
+        ProductoDistribucion producto = new ProductoDistribucion(nombreProducto, destino, fechaLlegada, fechaSalida, productoFabrica);
+        return this.productosDistribuidora.add(producto);
+    }
+    
 }
