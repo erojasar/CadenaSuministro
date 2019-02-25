@@ -19,4 +19,8 @@ public class Retail extends CadenaSuministro{
         this.productosFinal = new ArrayList<ProductoVenta>();
     }
     
+    public boolean registrarProductoVenta(double valor, ProductoDistribucion productoDistribucion){
+        ProductoVenta producto =  new ProductoVenta(valor, productoDistribucion);
+        return this.productosFinal.add(producto);
+    }
 }
